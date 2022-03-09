@@ -57,23 +57,29 @@ export const gameBoard = {
 		if (state.gameWon !== false) {
 			if (cells.length === storage.wordLengthChoice) {
 				if (cells.join("").toLowerCase() === storage.randomWord.toLowerCase()) {
-					wordService.getWordDefinition().then((data) => {
-						state.wordDefinition =
-							data[0].meanings[0].definitions[0]?.definition;
-						state.gameWon = true;
-						m.redraw();
-					});
+					try {
+						wordService.getWordDefinition().then((data) => {
+							state.wordDefinition =
+								data[0].meanings[0].definitions[0]?.definition;
+							state.gameWon = true;
+							m.redraw();
+						});
+					} catch (e) {}
 				} else {
 					state.tryCount += 1;
 					state.letterCount = 0;
 				}
 				if (state.tryCount > storage.wordLengthChoice - 1) {
-					wordService.getWordDefinition().then((data) => {
-						state.wordDefinition =
-							data[0].meanings[0].definitions[0]?.definition;
-						state.gameWon = false;
-						m.redraw();
-					});
+					try {
+						wordService.getWordDefinition().then((data) => {
+							state.wordDefinition =
+								data[0].meanings[0].definitions[0]?.definition;
+							state.gameWon = false;
+							m.redraw();
+						});
+					} catch (e) {
+						console.log(storage.randomWord);
+					}
 				}
 				m.redraw();
 			} else {
