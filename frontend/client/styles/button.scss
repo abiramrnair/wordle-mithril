@@ -1,0 +1,36 @@
+#mithril-wordle-app {
+	.submit-button {
+		width: 45%;
+		height: 50px;
+		color: white;
+		font-size: 25px;
+		background: #7b68ee;
+		outline: none;
+		border: none;
+		border-radius: 4px;
+		transition: 0.3s;
+
+		&:hover {
+			cursor: pointer;
+			transition: 0.3s;
+			background: #6047eb;
+		}
+	}
+
+	.choice-button {
+		height: 70px;
+		color: white;
+		font-size: 30px;
+		background: #778899;
+		outline: none;
+		border: none;
+		border-radius: 4px;
+		transition: 0.3s;
+
+		&:hover {
+			cursor: pointer;
+			transition: 0.3s;
+			background: #637383;
+		}
+	}
+}

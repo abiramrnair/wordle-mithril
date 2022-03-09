@@ -1,0 +1,15 @@
+#mithril-wordle-app {
+	.length-choices-container {
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		font-size: 30px;
+		gap: 40px;
+		text-align: center;
+	}
+
+	.loading-message {
+		font-size: 30px;
+		font-style: italic;
+	}
+}

@@ -1,0 +1,39 @@
+#mithril-wordle-app {
+	.letter-cell {
+		width: 80px;
+		height: 80px;
+		border: 1px solid grey;
+		outline: none;
+		border-radius: 4px;
+		font-size: 60px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: 0.3s;
+
+		&.disabled {
+			background: #737373;
+			pointer-events: none;
+			border: none;
+		}
+
+		&.attempted {
+			pointer-events: none;
+			border: none;
+		}
+
+		&.green-cell {
+			background: #2e8b57;
+			color: white;
+		}
+
+		&.yellow-cell {
+			background: #daa520;
+			color: white;
+		}
+
+		&.grey-cell {
+			background: #cd5c5c;
+			color: white;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+#mithril-wordle-app {
+	.game-board-container {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+		width: 30%;
+		align-items: center;
+
+		.grid {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.correct-answer-container {
+			text-align: center;
+			font-size: 25px;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			width: 100%;
+
+			.correct-answer-definition {
+				font-size: 15px;
+				font-style: italic;
+				text-align: left;
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+}
